@@ -11,8 +11,14 @@ preflight:
 
   # Replace variables
   set_text_variables:
-    - date: idk
-    - revision: hashbrowns
+    - name: "revision"
+      command: "git describe --abbrev=8 --always --tags"
+      before: "Git Revision: <"
+      after: ">"
+    - name: "date"
+      command: "date '+%Y-%m-%d'"
+      before: "Date: <"
+      after: ">"
 
 outputs:
   - name: "Images"
