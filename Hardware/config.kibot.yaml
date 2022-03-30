@@ -9,6 +9,11 @@ preflight:
   # Do a DRC check
   run_drc: false # (Skip for now)
 
+  # Replace variables
+  set_text_variables:
+    - date: idk
+    - revision: hashbrowns
+
 outputs:
   - name: "Images"
     comment: "Schematics and media for use in docs"

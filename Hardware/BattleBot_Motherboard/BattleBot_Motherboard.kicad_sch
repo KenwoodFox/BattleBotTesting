@@ -6,8 +6,8 @@
 
   (title_block
     (title "Unnamed BattleBot Schematic")
-    (date "2022-03-30")
-    (rev "fcd54910")
+    (date "${issue}")
+    (rev "${revision}")
     (company "Orbital Precession")
   )
 
