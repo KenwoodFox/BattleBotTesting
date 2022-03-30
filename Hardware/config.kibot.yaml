@@ -13,12 +13,8 @@ preflight:
   set_text_variables:
     - name: "revision"
       command: "git describe --abbrev=8 --always --tags"
-      before: "Git Revision: <"
-      after: ">"
-    - name: "date"
+    - name: "issue"
       command: "date '+%Y-%m-%d'"
-      before: "Date: <"
-      after: ">"
 
 outputs:
   - name: "Images"
