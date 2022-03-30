@@ -21,6 +21,10 @@ jobs:
           config: Hardware/config.kibot.yaml
           # Prefix for output in config file.
           dir: _output
+
+          # Hardware Files
+          schema: "Hardware/BattleBot_Motherboard/BattleBot_Motherboard.kicad_sch"
+          board: "Hardware/BattleBot_Motherboard/BattleBot_Motherboard.kicad_pcb"
       - name: upload results
         uses: actions/upload-artifact@v2
         with:
