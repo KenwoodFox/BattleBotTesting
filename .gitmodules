@@ -1,0 +1,3 @@
+[submodule "Hardware/BattleBot_Motherboard/Libraries/kicad-libraries"]
+	path = Hardware/BattleBot_Motherboard/Libraries/kicad-libraries
+	url = https://github.com/espressif/kicad-libraries.git
