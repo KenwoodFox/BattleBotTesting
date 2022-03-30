@@ -6,4 +6,5 @@ Unnamed Battle Bot's Documentation
    :caption: Contents:
 
    introduction/introduction
+   electronics/electronics
    
