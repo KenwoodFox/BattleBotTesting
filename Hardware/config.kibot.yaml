@@ -1,0 +1,19 @@
+kibot:
+  version: 1
+# Look into pcb_replace, looks sick! Also sch_replace
+
+preflight:
+  # Warn us about unconnected
+  ignore_unconnected: false
+
+  # Do a DRC check
+  run_drc: true
+
+outputs:
+  - name: "Images"
+    comment: "Schematics and media for use in docs"
+    type: svg_sch_print
+
+  - name: "3D Models"
+    comment: "3D Models for use by the CAD team"
+    type: step
