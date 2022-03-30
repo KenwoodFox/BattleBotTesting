@@ -19,3 +19,18 @@ fp-info-cache
 # Autorouter files (exported from Pcbnew)
 *.dsn
 *.ses
+
+# Binaries
+*.FCStd1
+*.stl
+*.pdf
+*.*~
+
+# Build dirs
+_build
+docs/uniforms/patches/renders
+
+# Junk
+.vscode
+Pipfile
+Pipfile.lock
