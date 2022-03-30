@@ -56,7 +56,7 @@ jobs:
       - run: sudo apt install texlive-latex-recommended texlive-latex-extra texlive-pictures pandoc rename latexmk
 
       - name: Install requirements
-        run: pip install -r docs/requirements.txt
+        run: pip install -r Docs/requirements.txt
 
       # Download artifacts from other builds
       - uses: actions/download-artifact@v2
@@ -64,11 +64,11 @@ jobs:
           name: BattleBotHardware
           path: _hardwareOutput
 
-      - run: cd docs && make latexpdf
+      - run: cd Docs && make latexpdf
 
-      - run: mv docs/_build/latex/*.pdf docs/_build/latex/Burnt_Toaster_Robot_Manual.pdf
+      - run: mv Docs/_build/latex/*.pdf Docs/_build/latex/Unnamed_BattleBot_Manual.pdf
 
       - uses: actions/upload-artifact@v2
         with:
-          name: Tidal_Force_Robot_Manual
-          path: docs/_build/latex/Burnt_Toaster_Robot_Manual.pdf
+          name: Unnamed_BattleBot_Manual
+          path: Docs/_build/latex/Unnamed_BattleBot_Manual.pdf
