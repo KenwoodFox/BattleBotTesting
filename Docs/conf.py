@@ -15,7 +15,7 @@ release = str(repo.git.describe("--tags", "--always"))
 
 # General Config
 
-extensions = ["sphinx.ext.autosectionlabel"]
+extensions = ["sphinx.ext.autosectionlabel", "sphinx.ext.imgconverter"]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
