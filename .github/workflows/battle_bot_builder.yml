@@ -53,10 +53,7 @@ jobs:
 
       - run: sudo apt update
 
-        # bug with imgmagic?
-      - run: sudo apt remove ghostscript && sudo apt install ghostscript
-
-      - run: sudo apt install texlive-latex-recommended texlive-latex-extra texlive-pictures pandoc rename latexmk imagemagick
+      - run: sudo apt install texlive-latex-recommended texlive-latex-extra texlive-pictures pandoc rename latexmk inkscape imagemagick
 
       - name: Install requirements
         run: pip install -r Docs/requirements.txt
