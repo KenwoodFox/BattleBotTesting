@@ -32,7 +32,7 @@ jobs:
       - name: upload results
         uses: actions/upload-artifact@v2
         with:
-          name: BattleBotHardware
+          name: BattleBot-Hardware
           path: _hardwareOutput
 
   make_docs:
@@ -61,17 +61,17 @@ jobs:
       # Download artifacts from other builds
       - uses: actions/download-artifact@v2
         with:
-          name: BattleBotHardware
+          name: BattleBot-Hardware
           path: _hardwareOutput
 
       - run: cd Docs && make latexpdf
 
-      - run: mv Docs/_build/latex/*.pdf Docs/_build/latex/Unnamed_BattleBot_Manual.pdf
+      - run: mv Docs/_build/latex/*.pdf Docs/_build/latex/BattleBot-Manual.pdf
 
       - uses: actions/upload-artifact@v2
         with:
-          name: Unnamed_BattleBot_Manual
-          path: Docs/_build/latex/Unnamed_BattleBot_Manual.pdf
+          name: BattleBot-Manual
+          path: Docs/_build/latex/BattleBot-Manual.pdf
 
   publish:
     # Only run on tags
@@ -83,7 +83,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v2
         with:
-          name: Unnamed_BattleBot_Manual
+          name: BattleBot-Manual
 
       - name: Upload Docs to release
         uses: svenstaro/upload-release-action@v2
