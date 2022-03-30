@@ -53,7 +53,10 @@ jobs:
 
       - run: sudo apt update
 
-      - run: sudo apt install texlive-latex-recommended texlive-latex-extra texlive-pictures pandoc rename latexmk imagemagick libfreetype6-dev libfontconfig1-dev ttf-mscorefonts-installer ghostscript
+        # bug with imgmagic?
+      - run: sudo apt remove ghostscript && sudo apt install ghostscript
+
+      - run: sudo apt install texlive-latex-recommended texlive-latex-extra texlive-pictures pandoc rename latexmk imagemagick
 
       - name: Install requirements
         run: pip install -r Docs/requirements.txt
