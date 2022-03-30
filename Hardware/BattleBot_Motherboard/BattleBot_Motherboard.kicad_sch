@@ -9,7 +9,7 @@
     (date "${issue}")
     (rev "${revision}")
     (company "Orbital Precession")
-    (comment 4 "${full_hash}")
+    (comment 4 "${full_revision}")
   )
 
   (lib_symbols
