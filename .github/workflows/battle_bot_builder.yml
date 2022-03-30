@@ -53,7 +53,17 @@ jobs:
 
       - run: sudo apt update
 
-      - run: sudo apt install texlive-latex-recommended texlive-latex-extra texlive-pictures pandoc rename latexmk imagemagick
+      - run: sudo apt install texlive-latex-recommended \
+          texlive-latex-extra \
+          texlive-pictures \
+          pandoc \
+          rename \
+          latexmk \
+          imagemagick \
+          libfreetype6-dev \
+          libfontconfig1-dev \
+          ttf-mscorefonts-installer \
+          ghostscript
 
       - name: Install requirements
         run: pip install -r Docs/requirements.txt
