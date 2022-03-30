@@ -12,7 +12,9 @@ preflight:
   # Replace variables
   set_text_variables:
     - name: "revision"
-      command: "git describe --abbrev=8 --always --tags"
+      command: "git rev-parse --short HEAD"
+    - name: "full_revision"
+      command: "git describe --always --tags"
     - name: "issue"
       command: "date '+%Y-%m-%d'"
 
