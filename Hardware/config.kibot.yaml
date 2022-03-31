@@ -4,7 +4,7 @@ kibot:
 
 preflight:
   # Warn us about unconnected
-  ignore_unconnected: false
+  ignore_unconnected: true # (Skip for now)
 
   # Do a DRC check
   run_drc: false # (Skip for now)
