@@ -34,3 +34,6 @@ docs/uniforms/patches/renders
 .vscode
 Pipfile
 Pipfile.lock
+
+# Pio
+.pio
