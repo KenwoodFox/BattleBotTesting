@@ -82,15 +82,26 @@ jobs:
     needs: [make_docs, KiCad_Hardware]
 
     steps:
+      # Download artifacts
       - uses: actions/download-artifact@v2
         with:
           name: BattleBot-Manual
+
+      - uses: actions/download-artifact@v2
+        with:
+          name: BattleBot-Hardware
+
+      - run: mkdir -p _staging/
+
+      - run: cp *.pdf _staging/
+
+      - run: cp *.step _staging/
 
       - name: Upload Docs to release
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: "*.pdf"
+          file: "_staging/*"
           tag: ${{ github.ref }}
           overwrite: true
           prerelease: true

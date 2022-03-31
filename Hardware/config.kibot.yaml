@@ -15,6 +15,7 @@ preflight:
       command: "git rev-parse --short HEAD"
     - name: "full_revision"
       command: "git describe --always --tags"
+      before: "Release: "
     - name: "issue"
       command: "date '+%Y-%m-%d'"
     - name: "ESPRESSIF_3DMODELS" # 3D models for ESP devices
