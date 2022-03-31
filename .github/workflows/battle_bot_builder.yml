@@ -17,6 +17,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+          submodules: true
 
       - uses: INTI-CMNB/KiBot@v2_k6
         with:
