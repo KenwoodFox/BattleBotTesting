@@ -23,3 +23,4 @@ revision = (
 motd = f"\\r\\nStarting robot software. Using version {revision}.\\ncompiled on {today.strftime('%B %d, %Y')}.\\r\\n\\r\\n"
 
 print(f"-DMOTD='\"{motd}\"'")
+print(f"-DREVISION='\"{revision}\"'")
