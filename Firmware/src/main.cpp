@@ -11,8 +11,16 @@
 
 void setup()
 {
+    // Serial over USB
+    Serial.begin(115200);
+
     // initialize digital pin LED_BUILTIN as an output.
     pinMode(FLASH_LED, OUTPUT);
+
+    delay(500);
+
+    // Print MOTD
+    Serial.println(MOTD);
 }
 
 // the loop function runs over and over again forever

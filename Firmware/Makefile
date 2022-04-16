@@ -19,10 +19,13 @@ build:
 	pio run
 
 flash:
-	pio run --target upload
+	pio run -t upload
+
+spiffs:
+	pio run -t uploadfs
 
 clean:
-	pio run --target clean
+	pio run -t clean
 
 lint:
 	pio check
@@ -30,7 +33,5 @@ lint:
 test:
 	pio test --upload-port $(SERIAL_DEV)
 
-# Monitor the serial (debug) output.
-# Requires minicom
 monitor: flash
-	minicom -c on -D $(SERIAL_DEV) -b 115200
+	pio device monitor --port $(SERIAL_DEV)
